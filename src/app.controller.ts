@@ -7,7 +7,7 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('')
+  @Get('*')
   getHello(@Res() res: Response) {
     res.sendFile(path.join(__dirname, '..', 'public', 'index.html'))
   }
